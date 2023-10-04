@@ -21,181 +21,329 @@
         <li><a >Regression</a></li>
     </ul>
     <li class="header">Dubai Property Prices Prediction<li></li>
+    
 </div>
 <div class="login-box">
  
   <br><br>
   <form method="POST" action="{{url_for('predict')}}">
     <div class="testbox">
- <div class="columns">
+        <div class="container">
         <div class="user-box">
         <label for="price">Price:</label>
-        <input type="number" name="Price" id="Price"  ><br><br>
+        <input type="number" name="Price" id="Price" min="0" ><br><br>
         </div>
           
 	    <div class="user-box">
-		<label for="size_in_sqft">Size in sqft.:</label>
-        <input type="number" name="Size in Sqft" id="size_in_sqft"><br><br>
+		<label for="size_in_sqft">Size in Sqft:</label>
+        <input type="number" name="Size in Sqft" id="size_in_sqft" min="0" ><br><br>
 		</div>
 
 		<div class="user-box">
         <label for="no_of_bedrooms">No of Bedrooms:</label>
-        <input type="number" name="No of Bedrooms" id="no_of_bedrooms"><br><br>
+        <input type="number" name="No of Bedrooms" id="no_of_bedrooms" min="0" ><br><br>
 	    </div>
 
 		<div class="user-box">
         <label for="no_of_bathrooms">No of Bathrooms:</label>
-        <input type="number" name="No of Bathrooms"  id="no_of_bathrooms"><br><br>
+        <input type="number" name="No of Bathrooms"  id="no_of_bathrooms" min="0" ><br><br>
 	    </div>
 
-		<div class="user-box">
-        <label for="maid_room">Maid Room:</label>
-        <input type="number" name="Maid Room" id="maid_room"><br><br>
-	    </div>
+        <div class="container">
+        <div class="radiobutton">
+        <fieldset>
+        <label for="maid_room">Maid Room:</label><br>
+        <input type="radio" name="Maid Room" id="maid_room_yes" value="1">
+        <label for="maid_room_yes">Yes</label>
+        <input type="radio" name="Maid Room" id="maid_room_no" value="0">
+        <label for="maid_room_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="unfurnished">Unfurnished:</label>
-        <input type="number" name="Unfurnished" id="unfurnished"><br><br>
+		<div class="radiobutton">
+        <fieldset>
+        <label>Unfurnished:</label><br>
+        <input type="radio" name="Unfurnished" id="unfurnished_yes" value="1">
+        <label for="unfurnished_yes">Yes</label>
+        <input type="radio" name="Unfurnished" id="unfurnished_no" value="0">
+        <label for="unfurnished_no">No</label>
+        </fieldset>
+        </div>
 
-	    </div>
+
+		<div class="radiobutton">
+        <fieldset>
+        <label>Balcony:</label><br>
+        <input type="radio" name="Balcony" id="balcony_yes" value="1">
+        <label for="balcony_yes">Yes</label>
+        <input type="radio" name="Balcony" id="balcony_no" value="0">
+        <label for="balcony_no">No</label>
+        </fieldset>
+        </div>
+
+        <div class="radiobutton">
+        <fieldset>
+        <label>Barbecue Area:</label><br>
+        <input type="radio" name="Barbecue Area" id="barbecue_area_yes" value="1">
+        <label for="barbecue_area_yes">Yes</label>
+        <input type="radio" name="Barbecue Area" id="barbecue_area_no" value="0">
+        <label for="barbecue_area_no">No</label>
+        </fieldset>
+        </div>
+
+        <div class="radiobutton">
+        <fieldset>
+        <label>Built in Wardrobes:</label><br>
+        <input type="radio" name="Built in Wardrobes" id="built_in_wardrobes_yes" value="1">
+        <label for="built_in_wardrobes_yes">Yes</label>
+        <input type="radio" name="Built in Wardrobes" id="built_in_wardrobes_no" value="0">
+        <label for="built_in_wardrobes_no">No</label>
+        </fieldset>
+        </div>
 
 
-		<div class="user-box">
-        <label for="balcony">Balcony:</label>
-        <input type="number" name="Balcony" id="balcony"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Central A/C:</label><br>
+        <input type="radio" name="Central A/C" id="central_ac_yes" value="1">
+        <label for="central_ac_yes">Yes</label>
+        <input type="radio" name="Central A/C" id="central_ac_no" value="0">
+        <label for="central_ac_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="barbecue_area">Barbecue Area:</label>
-        <input type="number" name="Barbecue Area" id="barbecue_area"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Childrens Play Area:</label><br>
+        <input type="radio" name="Childrens Play Area" id="childrens_play_area_yes" value="1">
+        <label for="childrens_play_area_yes">Yes</label>
+        <input type="radio" name="Childrens Play Area" id="childrens_play_area_no" value="0">
+        <label for="childrens_play_area_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="built_in_wardrobes">Built in Wardrobes:</label>
-        <input type="number" name="Built in Wardrobes" id="built_in_wardrobes"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Childrens Pool:</label><br>
+        <input type="radio" name="Childrens Pool" id="childrens_pool_yes" value="1">
+        <label for="childrens_pool_yes">Yes</label>
+        <input type="radio" name="Childrens Pool" id="childrens_pool_no" value="0">
+        <label for="childrens_pool_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="central_ac">Central A/C:</label>
-        <input type="number" name="Central A/C" id="central_ac"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="childrens_play_area">Childrens Play Area:</label>
-        <input type="number" name="Childrens Play Area" id="childrens_play_area"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Concierge:</label><br>
+        <input type="radio" name="Concierge" id="concierge_yes" value="1">
+        <label for="concierge_yes">Yes</label>
+        <input type="radio" name="Concierge" id="concierge_no" value="0">
+        <label for="concierge_no">No</label>
+        </fieldset>
+        </div>
+        </div>
 
-		<div class="user-box">
-        <label for="childrens_pool">Childrens Pool:</label>
-        <input type="number" name="Childrens Pool" id="childrens_pool"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="concierge">Concierge:</label>
-        <input type="number" name="Concierge" id="concierge"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Covered Parking:</label><br>
+        <input type="radio" name="Covered Parking" id="covered_parking_yes" value="1">
+        <label for="covered_parking_yes">Yes</label>
+        <input type="radio" name="Covered Parking" id="covered_parking_no" value="0">
+        <label for="covered_parking_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="covered_parking">Covered Parking:</label>
-        <input type="number" name="Covered Parking" id="covered_parking"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="kitchen_appliances">Kitchen Appliances:</label>
-        <input type="number" name="Kitchen Appliances" id="kitchen_appliances"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Kitchen Appliances:</label><br>
+        <input type="radio" name="Kitchen Appliances" id="kitchen_appliances_yes" value="1">
+        <label for="kitchen_appliances_yes">Yes</label>
+        <input type="radio" name="Kitchen Appliances" id="kitchen_appliances_no" value="0">
+        <label for="kitchen_appliances_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="lobby_in_building">Lobby in Building:</label>
-        <input type="number" name="Lobby in Building" id="lobby_in_building"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="maid_service">Maid Service:</label>
-        <input type="number" name="Maid Service" id="maid_service"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Lobby in Building:</label><br>
+        <input type="radio" name="Lobby in Building" id="lobby_in_building_yes" value="1">
+        <label for="lobby_in_building_yes">Yes</label>
+        <input type="radio" name="Lobby in Building" id="lobby_in_building_no" value="0">
+        <label for="lobby_in_building_no">No</label>
+        </fieldset>
+        </div>
 
-		<div class="user-box">
-        <label for="networked">Networked:</label>
-        <input type="number" name="Networked" id="networked"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="pets_allowed">Pets Allowed:</label>
-        <input type="number" name="Pets Allowed" id="pets_allowed"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Maid Service:</label><br>
+        <input type="radio" name="Maid Service" id="maid_service_yes" value="1">
+        <label for="maid_service_yes">Yes</label>
+        <input type="radio" name="Maid Service" id="maid_service_no" value="0">
+        <label for="maid_service_no">No</label>
+        </fieldset>
+        </div>
+        
+        <div class="radiobutton">
+        <fieldset>
+        <label>Networked:</label><br>
+        <input type="radio" name="Networked" id="networked_yes" value="1">
+        <label for="networked_yes">Yes</label>
+        <input type="radio" name="Networked" id="networked_no" value="0">
+        <label for="networked_no">No</label>
+        </fieldset>
+        </div>        
 
-		<div class="user-box">
-        <label for="private_garden">Private Garden:</label>
-        <input type="number" name="Private Garden" id="private_garden"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Pets Allowed:</label><br>
+        <input type="radio" name="Pets Allowed" id="pets_allowed_yes" value="1">
+        <label for="pets_allowed_yes">Yes</label>
+        <input type="radio" name="Pets Allowed" id="pets_allowed_no" value="0">
+        <label for="pets_allowed_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="private_gym">Private Gym:</label>
-        <input type="number" name="Private Gym" id="Private Gym"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="private_jacuzzi">Private Jacuzzi:</label>
-        <input type="number" name="Private Jacuzzi" id="private_jacuzzi"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Private Garden:</label><br>
+        <input type="radio" name="Private Garden" id="private_garden_yes" value="1">
+        <label for="private_garden_yes">Yes</label>
+        <input type="radio" name="Private Garden" id="private_garden_no" value="0">
+        <label for="private_garden_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="private_pool">Private Pool:</label>
-        <input type="number" name="Private Pool" id="private_pool"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Private Gym:</label><br>
+        <input type="radio" name="Private Gym" id="private_gym_yes" value="1">
+        <label for="private_gym_yes">Yes</label>
+        <input type="radio" name="Private Gym" id="private_gym_no" value="0">
+        <label for="private_gym_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="security">Security:</label>
-        <input type="number" name="Security" id="security"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="shared_gym">Shared Gym:</label>
-        <input type="number" name="Shared Gym" id="shared_gym"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Private Jacuzzi:</label><br>
+        <input type="radio" name="Private Jacuzzi" id="private_jacuzzi_yes" value="1">
+        <label for="private_jacuzzi_yes">Yes</label>
+        <input type="radio" name="Private Jacuzzi" id="private_jacuzzi_no" value="0">
+        <label for="private_jacuzzi_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="shared_pool">Shared Pool:</label>
-        <input type="number" name="Shared Pool" id="shared_pool"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Private Pool:</label><br>
+        <input type="radio" name="Private Pool" id="private_pool_yes" value="1">
+        <label for="private_pool_yes">Yes</label>
+        <input type="radio" name="Private Pool" id="private_pool_no" value="0">
+        <label for="private_pool_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="shared_spa">Shared Spa:</label>
-        <input type="number" name="Shared Spa" id="shared_spa"><br><br>
-	    </div>
 
-		<div class="user-box">
-        <label for="study">Study:</label>
-        <input type="number" name="Study" id="study"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Security:</label><br>
+        <input type="radio" name="Security" id="security_yes" value="1">
+        <label for="security_yes">Yes</label>
+        <input type="radio" name="Security" id="security_no" value="0">
+        <label for="security_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="private_jacuzzi">Private Jacuzzi:</label>
-        <input type="number" name="Private Jacuzzi" id="private_jacuzzi"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Shared Gym:</label><br>
+        <input type="radio" name="Shared Gym" id="shared_gym_yes" value="1">
+        <label for="shared_gym_yes">Yes</label>
+        <input type="radio" name="Shared Gym" id="shared_gym_no" value="0">
+        <label for="shared_gym_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="vastu_compliant">Vastu Compliant:</label>
-        <input type="number" name="Vastu Compliant" id="vastu_compliant"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Shared Pool:</label><br>
+        <input type="radio" name="Shared Pool" id="shared_pool_yes" value="1">
+        <label for="shared_pool_yes">Yes</label>
+        <input type="radio" name="Shared Pool" id="shared_pool_no" value="0">
+        <label for="shared_pool_no">No</label>
+        </fieldset>
+        </div>  
 
-		<div class="user-box">
-        <label for="view_of_landmark">View of Landmark:</label>
-        <input type="number" name="View of Landmark" id="view_of_landmark"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Shared Spa:</label><br>
+        <input type="radio" name="Shared Spa" id="shared_spa_yes" value="1">
+        <label for="shared_spa_yes">Yes</label>
+        <input type="radio" name="Shared Spa" id="shared_spa_no" value="0">
+        <label for="shared_spa_no">No</label>
+        </fieldset>
+        </div>          
 
-		<div class="user-box">
-        <label for="view_of_water">View of Water:</label>
-        <input type="number" name="View of Water" id="view_of_water"><br><br>
-	    </div>
+        <div class="radiobutton">
+        <fieldset>
+        <label>Study:</label><br>
+        <input type="radio" name="Study" id="study_yes" value="1">
+        <label for="study_yes">Yes</label>
+        <input type="radio" name="Study" id="study_no" value="0">
+        <label for="study_no">No</label>
+        </fieldset>
+        </div>   
 
-		<div class="user-box">
-        <label for="walk_in_closet">Walk in Closet:</label>
-        <input type="number" name="Walk in Closet" id="walk_in_closet"><br><br>
-	    </div>
 
-      
+        <div class="radiobutton">
+        <fieldset>
+        <label>Vastu Compliant:</label><br>
+        <input type="radio" name="Vastu Compliant" id="vastu_compliant_yes" value="1">
+        <label for="vastu_compliant_yes">Yes</label>
+        <input type="radio" name="Vastu Compliant" id="vastu_compliant_no" value="0">
+        <label for="vastu_compliant_no">No</label>
+        </fieldset>
+        </div> 
+
+        <div class="radiobutton">
+        <fieldset>
+        <label>View of Landmark:</label><br>
+        <input type="radio" name="View of Landmark" id="view_of_landmark_yes" value="1">
+        <label for="view_of_landmark_yes">Yes</label>
+        <input type="radio" name="View of Landmark" id="view_of_landmark_no" value="0">
+        <label for="view_of_landmark_no">No</label>
+        </fieldset>
+        </div> 
+
+        <div class="radiobutton">
+        <fieldset>
+        <label>View of Water:</label><br>
+        <input type="radio" name="View of Water" id="view_of_water_yes" value="1">
+        <label for="view_of_water_yes">Yes</label>
+        <input type="radio" name="View of Water" id="view_of_water_no" value="0">
+        <label for="view_of_water_no">No</label>
+        </fieldset>
+        </div> 
+
+        <div class="radiobutton">
+        <fieldset>
+        <label>Walk in Closet:</label><br>
+        <input type="radio" name="Walk in Closet" id="walk_in_closet_yes" value="1">
+        <label for="walk_in_closet_yes">Yes</label>
+        <input type="radio" name="Walk in Closet" id="walk_in_closet_no" value="0">
+        <label for="walk_in_closet_no">No</label>
+        </fieldset>
+        </div> 
+        </div>
+
+    <br><br><br><br>
     <button type="submit" value="Predict" id="submitBtn">
       <span></span>
       <span></span>
@@ -204,9 +352,7 @@
       Predict
     </button>
 
-    <div class="user-box">
-      <p style="color: #fff;">{{prediction_text}}</p>
-    </div>
+    
 
   
 

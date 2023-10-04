@@ -1,5 +1,5 @@
 .navbar {
-    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    background: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
     position: absolute;
     top: 0;
     left: 0;
@@ -14,8 +14,8 @@
     text-align: left;
     text-decoration: none;
     color: #fff; 
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 28px;
     margin-top: -47px;
     margin-left: 20px;
