@@ -22,31 +22,33 @@
     </ul>
     <li class="header">Dubai Property Prices Prediction<li></li>
 </div>
+<div class="container">
 <div class="login-box">
  
   <br><br>
   <form method="POST" action="{{url_for('predict')}}">
-    <div class="testbox">
+   
+    
  
-    <h2>Input Values:</h2>
-    <div class="user-box"></div>
-    <ul>
+    <h2>Input Values</h2>
+    <div class="columns">
+    
         {% for name, value in input_values.items() %}
-          <li>
+          
             <p class="tab-button">{{ name }}: {{ value }}</p>
-          </li>
+          
         {% endfor %}
-      </ul>
+      
 </div>
-    <div class="user-box">
-      <p style="color: #fff;">{{prediction_text}}</p>
-    </div>
-    <button type="submit" value="Previous" id="submitBtn">
+    
+    <br>
+    
+    <button value="Previous" id="submitBtn">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
-        Previous
+        {{prediction_text}}
       </button>
   
 

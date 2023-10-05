@@ -8,12 +8,25 @@ body {
     height: 100px;
     
   }
+
+  .container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding-inline: 20px;
+    
+}
   .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border: 1px solid white;
     
-    
+}
+
+fieldset {
+    border: none;
 }
 
 .radiobutton {
@@ -21,7 +34,8 @@ body {
     margin-bottom: 10px;
     flex-direction: column;
     width: 30%;
-    padding: 10px;    
+    padding: 10px;   
+
 }
 
 .radiobutton.radio-label::before {
@@ -33,6 +47,7 @@ body {
 }
 
 input[type="radio"]:checked + .radio-label::before {
+    display: inline-block;
     background-color: #03e9f4; /* Background color for checked state */
     border-color: #03e9f4; /* Border color for checked state */
     /* You can customize the checked state appearance */
@@ -69,6 +84,7 @@ input[type="radio"]:checked + .radio-label::before {
 .login-box .user-box {
     position: relative;
     width: 45%;
+
    
 }
   
@@ -77,7 +93,7 @@ input[type="radio"]:checked + .radio-label::before {
     padding: 30px 0px 0px;
     font-size: 16px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border: none;
     border-bottom: 1px solid #fff;
     outline: none;
@@ -117,7 +133,7 @@ input[type="radio"]:checked + .radio-label::before {
     transition: .5s;
     margin-top: 0px;
     margin-left: 650px;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     border:0px;
 }
   

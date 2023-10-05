@@ -28,7 +28,7 @@
   <br><br>
   <form method="POST" action="{{url_for('predict')}}">
     <div class="testbox">
-        <div class="container">
+      <div class="container-main">
         <div class="user-box">
         <label for="price">Price:</label>
         <input type="number" name="Price" id="Price" min="0" ><br><br>
@@ -48,6 +48,9 @@
         <label for="no_of_bathrooms">No of Bathrooms:</label>
         <input type="number" name="No of Bathrooms"  id="no_of_bathrooms" min="0" ><br><br>
 	    </div>
+      </div>
+
+      <br>
 
         <div class="container">
         <div class="radiobutton">
@@ -144,7 +147,10 @@
         </div>
         </div>
 
+        <br>
 
+
+        <div class="container">
         <div class="radiobutton">
         <fieldset>
         <label>Covered Parking:</label><br>
@@ -207,8 +213,12 @@
         <label for="pets_allowed_no">No</label>
         </fieldset>
         </div>  
+        </div>
+
+        <br>
 
 
+        <div class="container">
         <div class="radiobutton">
         <fieldset>
         <label>Private Garden:</label><br>
@@ -270,7 +280,11 @@
         <label for="shared_gym_no">No</label>
         </fieldset>
         </div>  
+        </div>
 
+        <br>
+
+        <div class="container">
         <div class="radiobutton">
         <fieldset>
         <label>Shared Pool:</label><br>

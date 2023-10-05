@@ -12,7 +12,7 @@ prediction_labels = {
     2.0: "Medium",
     3.0: "High",    
     # Add more mappings as needed
-}
+}    
 
 @app.route('/')
 def home():
@@ -20,13 +20,13 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():   
-    # Extract the input values from the form
+    # Extract the input values from the form     
     input_values = {key: int(value) for key, value in request.form.items()}
 
     # Call your model's predict function with the input features
     prediction = model.predict([np.array(list(input_values.values()))])
     output = round(prediction[0], 2)
-    output = float(output)
+    output = float(output)     
      
     # Map the numerical prediction to a label
     if output in prediction_labels:

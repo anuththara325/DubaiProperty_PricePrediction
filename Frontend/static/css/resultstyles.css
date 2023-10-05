@@ -8,6 +8,16 @@ body {
     
   }
 
+ h2 {
+    text-align: center;
+    margin-top: -15px;
+    padding-bottom: 30px;
+ } 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
   
   .login-box {
@@ -15,7 +25,6 @@ body {
         padding: 40px;
         background: rgba(0, 0, 0, 0.5);
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-        
         width: 800px;
         margin: 0 auto; /* Center the box horizontally */
         color: #fff;
@@ -23,42 +32,28 @@ body {
       
   }
 
-  .li {
-      display:flex;
-      justify-content:space-between;
-      flex-direction:row;
-      flex-wrap:wrap;
-      }
-
- 
-  
-  .login-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .login-box .user-box {
+  .columns {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 40%;
-   
-   
-  }
+    margin: 0 auto;
+    /* Define the width for each column */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    width: 20%;
+    padding-bottom: 0;
+    margin: 0 auto; /* Each column takes 50% of the container width */
+}
   
-  .login-box .user-box ul {
-    width: 100%;
-    padding: 30px 0px 0px;
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #fff;
-    outline: none;
-    background: transparent;
-  }
+
+
+  
+
 
   
 
@@ -76,17 +71,19 @@ body {
     overflow: hidden;
     transition: .5s;
     margin-top: 0px;
-    margin-left: 650px;
-    letter-spacing: 4px;
+    margin-left: 78px;
+    letter-spacing: 3px;
+    width: 650px;
+    height: 100px;
     border:0px;
   }
   .tab-button {
     
-    padding: 10px 20px; /* Add some padding to the buttons */
-    margin: 5px; /* Add margin between buttons */
+    padding: 7px; /* Add some padding to the buttons */
+     /* Add margin between buttons */
     border: none; /* Remove the button border */
     border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Add a pointer cursor on hover */
+
   }
   
   .login-box button:hover {
