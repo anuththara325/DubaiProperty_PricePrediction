@@ -8,7 +8,7 @@ app.config['SECRET_KEY'] = 'q1w2e3r4t5y6'
 model = pickle.load(open('Frontend/Model/model.pkl', 'rb'))
 
 prediction_labels = {
-    1.0: "Low",
+    1.0: "Low", 
     2.0: "Medium",
     3.0: "High",    
     # Add more mappings as needed
@@ -51,4 +51,4 @@ def show_result():
     return render_template('result.html', input_values=input_values, prediction_text='Quality: {}'.format(decoded_prediction))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
