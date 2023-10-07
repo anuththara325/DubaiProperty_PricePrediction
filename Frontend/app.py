@@ -6,7 +6,7 @@ app = Flask(__name__, static_url_path='/static')
 app.config['SECRET_KEY'] = 'q1w2e3r4t5y6'
 
 model = pickle.load(open('Frontend/Model/model.pkl', 'rb'))
-
+     
 prediction_labels = {
     1.0: "Low", 
     2.0: "Medium",
@@ -14,9 +14,17 @@ prediction_labels = {
     # Add more mappings as needed
 }    
 
+@app.route('/classification')
+def classify(): 
+    return render_template('main.html')
+ 
 @app.route('/')
 def home():
-    return render_template('main.html')
+    return render_template('home.html')
+
+@app.route('/regression')
+def regression():
+    return render_template('regression.html')       
 
 @app.route('/predict', methods=['POST'])
 def predict():   
@@ -27,6 +35,7 @@ def predict():
     prediction = model.predict([np.array(list(input_values.values()))])
     output = round(prediction[0], 2)
     output = float(output)     
+
      
     # Map the numerical prediction to a label
     if output in prediction_labels:

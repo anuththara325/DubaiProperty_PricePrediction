@@ -18,7 +18,7 @@
         <li><a href="/">Home</a></li>
         <li><a >Clustering</a></li>
         <li><a >Classification</a></li>
-        <li><a href="/regression" >Regression</a></li>
+        <li><a >Regression</a></li>
     </ul>
     <li class="header">Dubai Property Evaluation<li></li>
     
@@ -29,10 +29,7 @@
   <form method="POST" action="{{url_for('predict')}}">
     <div class="testbox">
       <div class="container-main">
-        <div class="user-box">
-        <label for="price">Price:</label>
-        <input type="number" name="Price" id="Price" min="0" ><br><br>
-        </div>
+        
           
 	    <div class="user-box">
 		<label for="size_in_sqft">Size in Sqft:</label>
@@ -48,11 +45,23 @@
         <label for="no_of_bathrooms">No of Bathrooms:</label>
         <input type="number" name="No of Bathrooms"  id="no_of_bathrooms" min="0" ><br><br>
 	    </div>
-      </div>
+
+        <div class="radio-quality">
+        <div class="radiobutton">
+            <fieldset>
+                <label for="quality">Quality:</label><br>
+                <select id="quality" name="Quality">
+                    <option value="1">Ultra High</option>
+                    <option value="0">High</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Low</option>
+                </select>
+            </fieldset>
+            </div>
+        </div>
 
       <br>
 
-      
         <div class="container">
         <div class="radiobutton">
         <fieldset>
