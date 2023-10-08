@@ -8,7 +8,9 @@ body {
     height: 100px;
     
   }
-
+.d {
+    font-size: 24px;
+}
   .container-main {
     display: flex;
     flex-wrap: wrap;
@@ -28,6 +30,7 @@ body {
     width: 0px;
     margin: 10px;
     
+    
 
 }
 .dropdown::before {
@@ -40,18 +43,19 @@ body {
 }
 
 .radio-quality {
-    margin-right: 210px;
+    margin-right: 230px;
     margin-top: -7px;
 }
 /* Style the dropdown select element */
 select {
     width: 300%;
-    height: 0px;
-    padding: 10px;
+    height: 26px;
+    padding: 0px;
     font-size: 14px;
     background: rgba(21, 55, 80, 0.9);
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: #fff;
 }
 
 /* Style the dropdown options */
@@ -167,7 +171,7 @@ input[type="radio"]:checked + .radio-label::before {
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-bottom: -10px;
+    margin-top: -52px;
     margin-left: 650px;
     letter-spacing: 3px;
     border:0px;

@@ -1,5 +1,5 @@
 .navbar {
-    background: rgba(0, 0, 0, 0.3); /* Adjust the opacity as needed */
+    background: rgba(0, 0, 0, 0.2); /* Adjust the opacity as needed */
     position: absolute;
     top: 0;
     left: 0;
@@ -40,6 +40,10 @@
     font-weight: bold;
 }
 
+.navbar ul li.active a {
+    border-bottom: 2px solid white; 
+    padding-bottom: 5px;
+}
 .navbar a.active::after {
     content: "";
     display: block;

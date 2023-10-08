@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__, static_url_path='/static')
 app.config['SECRET_KEY'] = 'q1w2e3r4t5y6'
-
+       
 model = pickle.load(open('Frontend/Model/model.pkl', 'rb'))
 mtregmodel = pickle.load(open('Frontend/Model/mtregmodel.pkl', 'rb'))
      
