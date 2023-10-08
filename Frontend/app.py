@@ -6,14 +6,14 @@ app = Flask(__name__, static_url_path='/static')
 app.config['SECRET_KEY'] = 'q1w2e3r4t5y6'
        
 model = pickle.load(open('Frontend/Model/model.pkl', 'rb'))
-mtregmodel = pickle.load(open('Frontend/Model/mtregmodel.pkl', 'rb'))
+rfmodel = pickle.load(open('Frontend/Model/rfmodel.pkl', 'rb'))
      
 prediction_labels = {
     1.0: "Low", 
     2.0: "Medium",
     3.0: "High", 
-    4.0: "Ultra High"       
-}    
+    4.0: "Ultra High"         
+}      
 
 @app.route('/classification')
 def classify(): 
@@ -21,10 +21,10 @@ def classify():
  
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/regression')
-def regression():
+def rfression():
     return render_template('regression.html')       
 
 @app.route('/predict', methods=['POST'])
@@ -37,7 +37,7 @@ def predict():
     output = round(prediction[0], 2)
     output = float(output)     
 
-     
+       
     # Map the numerical prediction to a label
     if output in prediction_labels:
         decoded_prediction = prediction_labels[output]   
@@ -58,36 +58,36 @@ def show_result():
     decoded_prediction = session.get('prediction', "Unknown")
 
     # Pass the input values and decoded prediction to the result.html template
-    return render_template('result.html', input_values=input_values, prediction_text='Quality: {}'.format(decoded_prediction))
+    return render_template('resultclass.html', input_values=input_values, prediction_text='Quality: {}'.format(decoded_prediction))
 
 
 
-@app.route('/regpredict', methods=['POST'])
-def regpredict():   
+@app.route('/rfpredict', methods=['POST'])   
+def rfpredict():   
     # Extract the input values from the form     
-    input_values_reg = {key: int(value) for key, value in request.form.items()}
+    input_values_rf = {key: int(value) for key, value in request.form.items()}
 
     # Call your model's predict function with the input features
-    prediction_reg = mtregmodel.predict([np.array(list(input_values_reg.values()))])
-    output_reg = round(prediction_reg[0], 2)
-    output_reg = float(output_reg)          
+    prediction_rf = rfmodel.predict([np.array(list(input_values_rf.values()))])
+    output_rf = round(prediction_rf[0], 2)
+    output_rf = float(output_rf)               
 
     # Store the input values and prediction in session variables
-    session['input_values_reg'] = input_values_reg
-    session['prediction_reg'] = output_reg  # Store the decoded prediction label
+    session['input_values_rf'] = input_values_rf
+    session['prediction_rf'] = output_rf  # Store the decoded prediction label
 
     # Redirect to the result page
-    return redirect(url_for('show_reg_result'))
+    return redirect(url_for('show_rf_result'))
 
-@app.route('/regresult')
-def show_reg_result():
+@app.route('/rfresult')
+def show_rf_result():
     # Retrieve the input values and decoded prediction from the session
-    input_values_reg = session.get('input_values_reg', {})
-    output_reg = session.get('prediction_reg', "Unknown")
+    input_values_rf = session.get('input_values_rf', {})
+    output_rf = session.get('prediction_rf', "Unknown")
 
     # Pass the input values and decoded prediction to the result.html template
-    return render_template('regresult.html', input_values_reg=input_values_reg, prediction_text_reg='Price: {}'.format(output_reg))
+    return render_template('resultrf.html', input_values_rf=input_values_rf, prediction_text_rf='Price: ${}'.format(output_rf))
 
 if __name__ == "__main__":         
-    app.run(debug=True) 
- 
+    app.run(debug=True)   
+    

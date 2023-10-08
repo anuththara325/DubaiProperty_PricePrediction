@@ -2,27 +2,50 @@
 <html>
   <head>
     <title>Price Prediction</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/css/navstyles.css">
+
+    <link href="../static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../static/css/formstyles.css" rel="stylesheet">
 
 
 </head>
 <body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex justify-content-between align-items-center">
 
-  <div class="navbar">
-    
-    <ul>
-        
-        <li><a href="/">HOME</a></li>
-        <li><a >CLUSTERING</a></li>
-        <li class="active"><a href="/classification">CLASSIFICATION</a></li>
-        <li><a href="/regression" >REGRESSION</a></li>
-    </ul>
-    <li class="header">D<b class="d">UBAI</b> P<b class="d">ROPERTY</b> E<b class="d">VALUATION</b></li>
-    
-</div>
+      <div id="logo">
+        <h1><a href="index.html">Avilon</a></h1>
+
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/clustering">Clustering</a></li>
+          <li><a class="nav-link scrollto active" href="/classification">Classification</a></li>
+          <li class="dropdown"><a href="/regression"><span>Regression</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+  <section id="hero">
+
+ 
 <div class="login-box">
  
   <br><br>
@@ -30,7 +53,7 @@
     <div class="testbox">
       <div class="container-main">
         <div class="user-box">
-        <label for="price">Price:</label>
+        <label for="price">Price (USD):</label>
         <input type="number" name="Price" id="Price" min="0" ><br><br>
         </div>
           
@@ -380,7 +403,38 @@
     </div></div>
   </form>
 </div>
+  </section>
 
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-start text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
+          </div>
+    
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/aos/aos.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js"></script>
 
 
 </body>

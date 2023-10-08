@@ -1,0 +1,465 @@
+/**
+* Template Name: Avilon
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    
+    color: #666666;
+    font-family: "Open Sans", sans-serif;
+    height: 300px;
+  }
+  
+  a {
+    color: #1dc8cd;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  a:hover,
+  a:active,
+  a:focus {
+    color: #1dc9ce;
+    outline: none;
+    text-decoration: none;
+  }
+  
+
+
+  
+  /*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+
+  
+
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    height: 90px;
+    transition: all 0.5s;
+    z-index: 997;
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+  }
+  
+  #header.header-transparent {
+    background: transparent;
+  }
+  
+  #header.header-scrolled {
+    background: linear-gradient(45deg, #1de099, #1dc8cd);
+    height: 70px;
+    transition: all 0.5s;
+  }
+  
+  #header #logo h1 {
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
+  #header #logo h1 a,
+  #header #logo h1 a:hover {
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    #header #logo h1 {
+      font-size: 28px;
+    }
+  
+    #header #logo img {
+      max-height: 40px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar>ul>li {
+   
+    padding: 10px 0 10px 24px;
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    padding: 0 2px;
+    white-space: nowrap;
+    transition: 0.3s;
+    letter-spacing: 0.4px;
+    position: relative;
+  }
+  
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar>ul>li>a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -8px;
+    left: 0;
+    background-color: #fff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  .navbar a:hover:before,
+  .navbar li:hover>a:before,
+  .navbar .active:before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #fff;
+  }
+  
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 24px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+  }
+  
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: none;
+    color: #333333;
+  }
+  
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color: #1dc8cd;
+  }
+  
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  
+  @media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+  
+    .navbar .dropdown .dropdown:hover>ul {
+      left: -100%;
+    }
+  }
+
+ 
+
+  
+
+  /*--------------------------------------------------------------
+  # Hero Section
+  --------------------------------------------------------------*/
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(61, 83, 83, 0.8)), url("../../static/images/dubai.jpg") center top repeat;
+    background-size: auto;
+    position: relative;
+  }
+  
+  /* Sections Header
+  --------------------------------*/
+  .section-header .section-title {
+    font-size: 32px;
+    color: #111;
+    text-align: center;
+    font-weight: 400;
+    
+  }
+  
+  .section-header .section-description {
+    text-align: center;
+    padding-bottom: 40px;
+    color: #777;
+    font-style: italic;
+  }
+  
+  .section-header .section-divider {
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #1dc8cd;
+    background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    /* Define the width for each column */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    width: 20%;
+    padding-bottom: 0;
+    margin: 0 auto; /* Each column takes 50% of the container width */
+} 
+  /* Section with background
+  --------------------------------*/
+  .section-bg {
+    background: #eff5f5;
+  }
+  h2 {
+    text-align: center;
+    margin-top: -15px;
+    padding-bottom: 30px;
+ } 
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #fff;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding-top: 100px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  #footer .credits {
+    font-size: 13px;
+    color: #888;
+  }
+  
+  #footer .footer-links a {
+    color: #666;
+    padding-left: 15px;
+  }
+  
+  #footer .footer-links a:first-child {
+    padding-left: 0;
+  }
+  
+  #footer .footer-links a:hover {
+    color: #1dc8cd;
+  }
+
+
+  .login-box {
+    
+    padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(61, 83, 83, 0.8)), url("../../static/images/dubai.jpg") center top no-repeat;
+    background-size: cover;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    height: 500px;
+    width: 1200px;
+    margin-top: 90px;
+    margin-left: -20px;  
+    margin-bottom: 180px;  
+    color: #fff;
+    position: absolute;
+  
+}
+
+
+  
+.login-box form button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 0px;
+    color: #03e9f4;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 0px;
+    margin-left: 238px;
+    letter-spacing: 3px;
+    width:700px;
+    height: 80px;
+    border:0px;
+  }
+  .tab-button {
+    
+    padding: 7px; /* Add some padding to the buttons */
+     /* Add margin between buttons */
+    border: none; /* Remove the button border */
+    border-radius: 5px; /* Add rounded corners */
+
+  }
+  
+  .login-box button:hover {
+    
+    color: #fff;
+    border-radius: 1px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 5px #03e9f4,
+                0 0 5px #03e9f4,
+                0 0 20px #03e9f4;
+  }
+  
+  .login-box button span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box button span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+
