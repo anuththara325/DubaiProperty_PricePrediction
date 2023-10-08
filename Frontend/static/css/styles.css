@@ -30,16 +30,18 @@ body {
     
 
 }
-.dropdown::after {
+.dropdown::before {
     content: '\25BC'; /* Unicode character for a down arrow */
     position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    color: #ff0000; /* Change the color of the arrow here */
+    color: #ffffff; /* Change the color of the arrow here */
 }
+
 .radio-quality {
-    margin-right: 160px;
+    margin-right: 210px;
+    margin-top: -7px;
 }
 /* Style the dropdown select element */
 select {
@@ -54,8 +56,7 @@ select {
 
 /* Style the dropdown options */
 option {
-    font-size: 14px;
-    
+    font-size: 14px;    
 }
 
 fieldset {
@@ -90,9 +91,10 @@ input[type="radio"]:checked + .radio-label::before {
 .login-box {
     
         padding: 40px;
+        padding-bottom: 50px;
         background: rgba(21, 55, 80, 0.9);
         box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-        height: 1260px;
+        height: 1268px;
         width: 800px;
         margin: 0 auto; /* Center the box horizontally */
         color: #fff;
@@ -165,7 +167,7 @@ input[type="radio"]:checked + .radio-label::before {
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 0px;
+    margin-bottom: -10px;
     margin-left: 650px;
     letter-spacing: 3px;
     border:0px;

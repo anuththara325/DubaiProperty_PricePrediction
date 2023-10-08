@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../static/css/styles.css">
     <link rel="stylesheet" href="../static/css/navstyles.css">
 
-
 </head>
 <body>
 
@@ -17,8 +16,8 @@
         
         <li><a href="/">Home</a></li>
         <li><a >Clustering</a></li>
-        <li><a >Classification</a></li>
-        <li><a >Regression</a></li>
+        <li><a href = "/classification">Classification</a></li>
+        <li><a href = "/regression">Regression</a></li>
     </ul>
     <li class="header">Dubai Property Evaluation<li></li>
     
@@ -26,7 +25,7 @@
 <div class="login-box">
  
   <br><br>
-  <form method="POST" action="{{url_for('predict')}}">
+  <form method="POST" action="{{url_for('regpredict')}}">
     <div class="testbox">
       <div class="container-main">
         
@@ -49,16 +48,17 @@
         <div class="radio-quality">
         <div class="radiobutton">
             <fieldset>
-                <label for="quality">Quality:</label><br>
+                <label for="quality" class="quality">Quality:</label><br>
                 <select id="quality" name="Quality">
-                    <option value="1">Ultra High</option>
-                    <option value="0">High</option>
+                    <option value="4">Ultra High</option>
+                    <option value="3">High</option>
                     <option value="2">Medium</option>
-                    <option value="3">Low</option>
+                    <option value="1">Low</option>
                 </select>
             </fieldset>
             </div>
         </div>
+      </div>
 
       <br>
 

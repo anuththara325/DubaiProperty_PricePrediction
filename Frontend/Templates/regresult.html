@@ -16,9 +16,9 @@
     <ul>
         
         <li><a href="/">Home</a></li>
-        <li><a href="/">Clustering</a></li>
-        <li><a href="/classification">Classification</a></li>
-        <li><a href="/regression">Regression</a></li>
+        <li><a >Clustering</a></li>
+        <li><a href = "/classification">Classification</a></li>
+        <li><a href = "/regression" >Regression</a></li>
     </ul>
     <li class="header">Dubai Property Prices Prediction<li></li>
 </div>
@@ -26,14 +26,14 @@
 <div class="login-box">
  
   <br><br>
-  <form method="POST" action="{{url_for('predict')}}">
+  <form method="POST" action="{{url_for('regpredict')}}">
    
     
  
     <h2>Property Details</h2>
     <div class="columns">
     
-        {% for name, value in input_values.items() %}
+        {% for name, value in input_values_reg.items() %}
           
             <p class="tab-button">{{ name }}: {{ value }}</p>
           
@@ -48,7 +48,7 @@
         <span></span>
         <span></span>
         <span></span>
-        {{prediction_text}}
+        {{prediction_text_reg}}
       </button>
   
 

@@ -1,0 +1,7 @@
+body {
+    background-image: url('../images/dubai.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Other background styles like color, position, etc. */
+}
