@@ -51,7 +51,7 @@ def predict():
     # Redirect to the result page
     return redirect(url_for('show_result'))
 
-@app.route('/result')
+@app.route('/result')      
 def show_result():
     # Retrieve the input values and decoded prediction from the session
     input_values = session.get('input_values', {})
@@ -60,7 +60,7 @@ def show_result():
     # Pass the input values and decoded prediction to the result.html template
     return render_template('resultclass.html', input_values=input_values, prediction_text='Quality: {}'.format(decoded_prediction))
 
-
+               
 
 @app.route('/rfpredict', methods=['POST'])   
 def rfpredict():   
@@ -70,7 +70,7 @@ def rfpredict():
     # Call your model's predict function with the input features
     prediction_rf = rfmodel.predict([np.array(list(input_values_rf.values()))])
     output_rf = round(prediction_rf[0], 2)
-    output_rf = float(output_rf)               
+    output_rf = float(output_rf)                
 
     # Store the input values and prediction in session variables
     session['input_values_rf'] = input_values_rf
