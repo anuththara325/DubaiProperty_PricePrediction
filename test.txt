@@ -1,0 +1,23 @@
+# Assuming you have a dictionary of form values in request.form
+input_values = request.form
+
+# Create a new dictionary to store the converted values
+converted_values = {}
+
+# Define the radio button field names
+radio_button_fields = ["Kitchen Appliances", "Another Radio Field"]  # Add all radio button field names
+
+# Iterate through the form values
+for field, value in input_values.items():
+    if field in radio_button_fields:
+        # Convert radio button values to "Yes" or "No"
+        if value == "1":
+            converted_values[field] = "Yes"
+        elif value == "0":
+            converted_values[field] = "No"
+        else:
+            converted_values[field] = value  # Handle other values
+    else:
+        converted_values[field] = value  # Keep other values as they are
+
+# Now you have a dictionary with converted radio button values and other values intact

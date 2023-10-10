@@ -29,6 +29,13 @@ a:focus {
   outline: none;
   text-decoration: none;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  
+}
 
 p {
   padding: 0;
