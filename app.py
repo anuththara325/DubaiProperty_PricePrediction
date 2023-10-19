@@ -13,8 +13,8 @@ prediction_labels = {
     2.0: "Medium",
     3.0: "High", 
     4.0: "Ultra High"         
-}    
-
+}       
+ 
 radio_button_display_names = {
     0: "No",
     1: "Yes"

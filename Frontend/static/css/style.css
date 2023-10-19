@@ -59,7 +59,7 @@ h6 {
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, orange, orange);
   color: #fff;
   border-radius: 4px 4px 0 0;
   right: 15px;
@@ -77,13 +77,13 @@ h6 {
 }
 
 .back-to-top:focus {
-  background: linear-gradient(45deg, #1de099, #1dc8cd);
+  background: linear-gradient(45deg, orange, #1dc8cd);
   color: #fff;
   outline: none;
 }
 
 .back-to-top:hover {
-  background: #1dc8cd;
+  background: orange;
   color: #fff;
 }
 
@@ -476,7 +476,7 @@ h6 {
 }
 
 #hero .btn-get-started:hover {
-  color: #1dc8cd;
+  color: orange;
   background: #fff;
 }
 
@@ -557,8 +557,8 @@ h6 {
   display: block;
   width: 60px;
   height: 3px;
-  background: #1dc8cd;
-  background: linear-gradient(0deg, #1dc8cd 0%, #55fabe 100%);
+  background: orange;
+  background: linear-gradient(0deg, orange 0%, orange 100%);
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -643,8 +643,9 @@ h6 {
 }
 
 #about .about-img img {
-  margin-left: -15px;
+  margin-left: 5px;
   max-width: 100%;
+  
 }
 
 @media (max-width: 768px) {
@@ -683,7 +684,7 @@ h6 {
 #about .content i {
   font-size: 20px;
   padding-right: 4px;
-  color: #1dc8cd;
+  color: orange;
 }
 
 #about .content ul {
@@ -740,7 +741,7 @@ h6 {
 }
 
 #advanced-features i:before {
-  background: #1dc8cd;
+  background: orange;
   background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -748,13 +749,15 @@ h6 {
 }
 
 #advanced-features .advanced-feature-img-right {
-  max-width: 100%;
+  width: 650px;
+  height: 420px;
   float: right;
   padding: 0 0 30px 30px;
 }
 
 #advanced-features .advanced-feature-img-left {
-  max-width: 100%;
+  width: 620px;
+  height: 450px;
   float: left;
   padding: 0 30px 30px 0;
 }
@@ -819,8 +822,8 @@ h6 {
 }
 
 #call-to-action .cta-btn:hover {
-  background: #1dc8cd;
-  border: 2px solid #1dc8cd;
+  background: orange;
+  border: 2px solid orange;
 }
 
 
